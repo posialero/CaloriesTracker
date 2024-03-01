@@ -22,6 +22,7 @@ room = "2.6.1"
 truth = "1.4.2"
 turbine = "1.0.0"
 mockk = "1.13.10"
+parcelize = "2.0.0-Beta4"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -62,4 +63,5 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
 kspLibrary = { id = "com.google.devtools.ksp", version.ref = "ksp"}
 daggerHiltLibrary = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt"}
+parcelizeLibrary = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "parcelize"}
 

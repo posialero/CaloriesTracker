@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlinAndroid)
 }
 
-apply(from = "$rootDir/base-module.gradle")
+apply(from = "$rootDir/compose-module.gradle")
 
 android {
-    namespace = "pl.dnajdrowski.core"
+    namespace = "pl.dnajdrowski.core_ui"
 }

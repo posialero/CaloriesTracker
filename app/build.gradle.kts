@@ -51,7 +51,7 @@ android {
 }
 
 dependencies {
-
+    // UI
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
@@ -60,6 +60,9 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+
+
+    // Tests
     testImplementation(libs.junit)
     testImplementation(libs.truth)
     testImplementation(libs.turbine)
@@ -72,26 +75,34 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
+
+    // Dagger-Hilt
     implementation(libs.dagger.hilt.android)
     ksp(libs.dagger.hilt.compiler)
 
+    // Hilt Compose Navigation
     implementation(libs.hilt.navigation.compose)
 
+    // Coil
     implementation(libs.coil.compose)
 
+    // Retrofit - Networking
     implementation(libs.retrofit)
     implementation(libs.okHtttp3)
     implementation(libs.okHtttp3.logging.interceptor)
     implementation(libs.moshi.converter)
 
+    // Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
 
-    implementation(project(":core"))
-    implementation(project(":onboarding:onboarding_presentation"))
-    implementation(project(":onboarding:onboarding_domain"))
-    implementation(project(":tracker:tracker_data"))
-    implementation(project(":tracker:tracker_presentation"))
-    implementation(project(":tracker:tracker_domain"))
+    // Modules
+    implementation(project(Modules.coreModule))
+    implementation(project(Modules.coreUiModule))
+    implementation(project(Modules.onBoardingPresentationModule))
+    implementation(project(Modules.onBoardingDomainModule))
+    implementation(project(Modules.trackerDataModule))
+    implementation(project(Modules.trackerPresentationModule))
+    implementation(project(Modules.trackerDomainModule))
 }
