@@ -12,7 +12,7 @@ android {
 
 dependencies {
     implementation(project(Modules.coreModule))
-    implementation(project(Modules.trackerDataModule))
+    implementation(project(Modules.trackerDomainModule))
 
     implementation(libs.retrofit)
     implementation(libs.okHtttp3)
