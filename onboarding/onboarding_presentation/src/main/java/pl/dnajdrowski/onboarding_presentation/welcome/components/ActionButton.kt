@@ -1,7 +1,6 @@
 package pl.dnajdrowski.onboarding_presentation.welcome.components
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Shapes
@@ -16,8 +15,8 @@ fun ActionButton(
     text: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    isEnabled: Boolean = false,
-    textStyle: TextStyle = MaterialTheme.typography.bodyMedium
+    isEnabled: Boolean = true,
+    textStyle: TextStyle = MaterialTheme.typography.bodyLarge
 ) {
     Button(
         modifier = modifier,

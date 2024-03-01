@@ -23,6 +23,7 @@ truth = "1.4.2"
 turbine = "1.0.0"
 mockk = "1.13.10"
 parcelize = "2.0.0-Beta4"
+lottie = "6.3.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -55,6 +56,7 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth"}
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine"}
 mockk-kotlin = { group = "io.mockk", name = "mockk", version.ref = "mockk"}
 mock-web-server = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "okhttp3"}
+lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
