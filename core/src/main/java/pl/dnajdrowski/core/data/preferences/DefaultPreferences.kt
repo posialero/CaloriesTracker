@@ -14,6 +14,7 @@ import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_GENDER
 import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_GOAL_TYPE
 import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_HEIGHT
 import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_PROTEIN_RATION
+import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_SHOULD_SHOW_ONBOARDING
 import pl.dnajdrowski.core.domain.preferences.Preferences.Companion.KEY_WEIGHT
 
 class DefaultPreferences(
@@ -73,6 +74,16 @@ class DefaultPreferences(
             .apply()
     }
 
+    override fun saveShouldShowOnBoarding(shouldShow: Boolean) {
+        sharedPref.edit()
+            .putBoolean(KEY_SHOULD_SHOW_ONBOARDING, shouldShow)
+            .apply()
+    }
+
+    override fun loadShouldShowOnBoarding(): Boolean {
+        return sharedPref.getBoolean(KEY_SHOULD_SHOW_ONBOARDING, true)
+    }
+
     override fun loadUserInfo(): UserInfo {
         val age = sharedPref.getInt(KEY_AGE, -1)
         val height = sharedPref.getInt(KEY_HEIGHT, -1)
@@ -85,15 +96,15 @@ class DefaultPreferences(
         val fatRadio = sharedPref.getFloat(KEY_FAT_RATIO, -1f)
 
         return UserInfo(
-            gender = Gender.fromString(genderString ?: "male"),
+            gender = Gender.valueOf(genderString ?: Gender.FEMALE.name),
             age = age,
             height = height,
             weight = weight,
-            activityLevel = ActivityLevel.fromString(activityLevelString ?: "low"),
-            goalType = GoalType.fromString(goalTypeString ?: "keep_weight"),
+            activityLevel = ActivityLevel.valueOf(activityLevelString ?: ActivityLevel.Low.name),
+            goalType = GoalType.valueOf(goalTypeString ?: GoalType.KeepWeight.name),
             carbRatio = carbRatio,
             proteinRatio = proteinRatio,
-            fatRadio = fatRadio
+            fatRatio = fatRadio
         )
     }
 }

@@ -8,3 +8,7 @@ apply(from = "$rootDir/compose-module.gradle")
 android {
     namespace = "pl.dnajdrowski.core_ui"
 }
+
+dependencies {
+    implementation(project(Modules.coreModule))
+}

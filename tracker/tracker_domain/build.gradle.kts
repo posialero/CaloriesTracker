@@ -11,4 +11,5 @@ android {
 
 dependencies {
     implementation(project(Modules.coreModule))
+    implementation(libs.core.ktx)
 }

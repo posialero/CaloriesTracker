@@ -92,11 +92,17 @@ dependencies {
     implementation(libs.okHtttp3)
     implementation(libs.okHtttp3.logging.interceptor)
     implementation(libs.moshi.converter)
+    implementation(libs.moshi.codegen)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi)
 
     // Room
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     ksp(libs.room.compiler)
+
+    // Lottie
+    implementation(libs.lottie)
 
     // Modules
     implementation(project(Modules.coreModule))

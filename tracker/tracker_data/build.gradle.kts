@@ -18,6 +18,9 @@ dependencies {
     implementation(libs.okHtttp3)
     implementation(libs.okHtttp3.logging.interceptor)
     implementation(libs.moshi.converter)
+    implementation(libs.moshi.codegen)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi)
 
     ksp(libs.room.compiler)
     implementation(libs.room.ktx)
